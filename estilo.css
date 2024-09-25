@@ -1,0 +1,8 @@
+#titulo{
+    text-align: center;
+    color: chocolate;
+}
+#mercurio, #venus, #marte{
+width: 50%;
+height: auto;
+}
