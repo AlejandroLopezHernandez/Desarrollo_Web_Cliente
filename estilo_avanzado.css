@@ -1,8 +1,23 @@
-#titulo{
+    *{
+      margin-right:10%
+    }
+    #titulo{
     text-align: center;
     color: chocolate;
-}
-#mercurio, #venus, #marte{
-width: 25%;
-height: auto;
-}
+    }
+    #mercurio, #venus, #marte{
+    width: 50%;
+    height: auto;
+    }
+    #carousel{
+      position:absolute;
+      top:50%;
+      transform: translateY(-50%);
+      width: 40%;
+    }
+    .carousel-control-prev{
+      margin-left: 5%;
+    }
+    .carousel-control-next{
+      margin-right: 50%;
+    }
