@@ -1,2 +1,0 @@
-# Desarrollo en Entorno Cliente
-

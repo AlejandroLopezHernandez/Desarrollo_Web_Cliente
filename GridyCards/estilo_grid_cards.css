@@ -1,0 +1,40 @@
+*{
+    background-color: rgb(204, 228, 248);
+    padding:0.3cm;
+    margin: 0.3cm;
+}
+#titulo{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:xx-large;
+    text-align: center;
+}
+.navbar{
+    position:sticky;
+    background: none;
+    background-color: rgb(136, 233, 233);
+    padding: 0.1cm;
+}
+#img1{
+    height: 500px;
+    width: 700px;
+}
+#img2{
+    height: 450px;
+    width: 700px;
+}
+#img3{
+    height: 500px;
+    width: 700px;
+}
+#img4{
+    height: 500px;
+    width: 700px;
+}
+#img5{
+    height: 500px;
+    width: 600px;
+}
+#img6{
+    height: 500px;
+    width: 700px;
+}
