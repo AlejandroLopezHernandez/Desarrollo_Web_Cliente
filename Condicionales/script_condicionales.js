@@ -52,6 +52,7 @@ let precio_entrada = 0;
     }
     return precio_final;*/
     function tipo_entrada() {
+    let entrada_datos_entrada = prompt("Introduce el tipo de entrada que quieras: vip, general o preferente");
         if(entrada_datos_entrada == "vip"){
             entrada_vip = true;
             precio_entrada = 100;
@@ -67,42 +68,43 @@ let precio_entrada = 0;
             precio_entrada = 40;
             alert("Has elegido una entrada general");
             //descuento();
-        }else{
-            alert("Elige un tipo de entrada correcto por favor,recarga la página");
+        } else{
+            alert("Introduce el tipo de entrada correcto por favor: vip, general o preferente");
+            return tipo_entrada();
         }
         return precio_entrada;
     }
-    function descuento1(){
+    function descuentos(){
         let entrada_club_fans_estudiante = prompt("Diga si usted es miembro del club de fans o estudiante");
-            if(entrada_club_fans_estudiante == "club de fans"){
-                descuento_club_fan = true;
-                precio_entrada * 0.20;
-            }else if(entrada_club_fans_estudiante == "estudiante"){
-                descuento_estudiante = true;
-                precio_entrada * 0.20;
-            }
-            return precio_entrada;
-            }
-    function descuento2(){
-    let edad_usuario = parseInt(prompt("Indique su edad por favor"));
-        if(edad_usuario < 18){
-         mayor_edad = true;
-         precio_entrada * 0.10;
-        }else if(mayor_edad == true && descuento_estudiante == true){
-            precio_entrada * 0.30;
-                }
-        return alert("Tu precio final es: " + precio_entrada);
+        if(entrada_club_fans_estudiante == "club de fans"){
+            descuento_club_fan = true;
+            precio_entrada = precio_entrada - (precio_entrada*0.20);
+            alert("Se le ha aplicado un descuento del 20% por pertenecer al club de fans");
+        }else if(entrada_club_fans_estudiante == "estudiante"){
+            descuento_estudiante = true;
+            precio_entrada = precio_entrada - (precio_entrada*0.20);
+            alert("Se le ha aplicado un decuento del 20% por ser estudiantee");
         }
-    
-    let entrada_datos_entrada = prompt("Introduce el tipo de entrada que quieras: vip, general o preferente");
- 
-    tipo_entrada();
-    if(entrada_datos_entrada !== "vip" || entrada_datos_entrada !== "general" || entrada_datos_entrada !== "preferente"){
-        tipo_entrada();
+
+    let edad_usuario = parseInt(prompt("Indique su edad por favor"));
+    if(edad_usuario < 18){
+     mayor_edad = true;
+     precio_entrada = precio_entrada -(precio_entrada*0.10);
+     alert("Se le ha aplicado un descuento del 10% por ser menor de edad");
     }
-    descuento1();
-    descuento2();
-    
+    if(mayor_edad &&(descuento_club_fan || descuento_estudiante)){
+        precio_entrada = precio_entrada -(precio_entrada*0.10);
+        alert("Ha acumulado el descuento por ser menor de edad y ser estudiante");
+    }
+    return precio_entrada;
+    }
+       
+     function mostrar_precio_final(){
+        tipo_entrada();
+        descuentos();
+        alert("El precio final es de: " + precio_entrada.toFixed(2) + "€");    
+     }
+     mostrar_precio_final();
     
 
 
