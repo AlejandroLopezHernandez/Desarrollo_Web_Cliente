@@ -4,17 +4,17 @@
 - El segundo permite borrar la clave del diccionario
 - El tercero mostrar por consola el diccionario.
 Cada boton llamara a una funcion distinta, todos estaran en mismo fichero js*/
-let my_array=[];
+let my_array = {};
 
 function añadir_clave_valor(){
 let clave = parseInt(prompt("Introduce un clave por favor, que sea un número entero"));
-my_array.push(clave);
 let valor= prompt("Introduce un valor para esta clave, que sea una cadena de texto");
-my_array.push(valor);
+    my_array[clave]=valor;
 }
 
 function borrar_clave(){
-my_array.shift();
+    let clave_borrar = parseInt(prompt("Introduce la clave que quieras borrar"));
+    delete my_array[clave_borrar];
 alert("Has borrado la clave del diccionario");
 }
 function mostrar_consola(){
