@@ -1,0 +1,19 @@
+.carrousel{
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+}
+#imagen{
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+}
+.body{
+    background-color:azure
+}
+#botones{
+    text-align: center;
+}
+#atras:hover , #delante:hover {
+    background-color:darkolivegreen
+}

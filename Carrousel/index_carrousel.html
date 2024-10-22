@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_carrousel.css">
+    <title>Carrousel de imágenes</title>
+</head>
+<body>
+    <h2> Clásicos de la literatura rusa </h2>
+    <div class="carrousel">
+        <input type="button" id="atras" value="Retroceder" onclick="retroceder()">
+        
+        <img id="imagenes" src="anna_karenina.jpeg" alt="">
+        
+        <input type="button" id="delante" value="Avanzar" onclick="avanzar()">
+    </div>
+    
+    <div id="botones">
+        <input type="radio" name="indicador" value="1" checked>
+        <input type="radio" name="indicador" value="2">
+        <input type="radio" name="indicador" value="3">
+        <input type="radio" name="indicador" value="4">
+        <input type="radio" name="indicador" value="5">
+    </div>
+    
+    <script src="script_carrousel.js"></script>
+</body>
+</html>
