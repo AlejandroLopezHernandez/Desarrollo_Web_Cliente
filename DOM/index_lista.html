@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de elementos</title>
+</head>
+<body>
+    <style>
+        .pares{
+            color: tomato;
+        }
+        .impares{
+            color:cornflowerblue
+        }
+    </style>
+    <script>
+        /*Añadir elementos a un HTML usando JavaScript*/
+        let lista_desordenada = document.createElement("ul");
+        //Con un bucle for i creamos la lista
+        for(let i = 1; i < 11; i ++){
+            let lista = document.createElement("li");
+            lista.innerHTML="lista=> "+i;
+            lista_desordenada.appendChild(lista);
+            if(i % 2 == 0){
+                lista.className = 'pares';
+            } else{
+                lista.className = 'impares';
+            }
+        }
+        //De esta manera lo añadimos al body
+        document.body.appendChild(lista_desordenada);
+    </script>
+</body>
+</html>
