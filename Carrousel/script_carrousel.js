@@ -4,6 +4,7 @@ let imagenes = ['anna_karenina.jpeg',
                 'hermanos_kamarazov.jpeg',
                 'maestro_margarita.jpg'];
 
+
 let imagen = document.querySelector('#imagenes');
 let radios = document.querySelectorAll('input[type="radio"]');
 
