@@ -34,3 +34,4 @@ console.log("El área del rectángulo es: " + areaRectangulo);
 
 let areaTriangulo = obtenerArea(5, 10) / 2;
 console.log("El área del triángulo es: " + areaTriangulo);
+
