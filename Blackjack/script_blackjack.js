@@ -77,3 +77,9 @@ if(puntos_jugador > 21){
     puntos_jugador = 0;
 }
 });
+//PLANTARSE
+let plantarse = document.querySelector('#plantarse');
+plantarse.addEventListener('click',(event)=>{
+let puntos_ordenador = document.querySelector('#puntos-crupier');
+puntos_ordenador.textContent = "Probando";
+});
