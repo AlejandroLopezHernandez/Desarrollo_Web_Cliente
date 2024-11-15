@@ -123,14 +123,13 @@ function crear_baraja(){
         plantarse.disabled = true;
     } else if(puntos_crupier >= 17){
         if(puntos_crupier > puntos_jugador){
-            mensaje_resultado.textContent = "¡La banca gana!";
+            mensaje_resultado.textContent = "¡El crupier gana!";
             pedir_carta.disabled = true;
             plantarse.disabled = true;       
         } else if(puntos_crupier < puntos_jugador){
             mensaje_resultado.textContent = "Enhorabuena, ¡has ganado como jugador!";
             pedir_carta.disabled = true;
-            plantarse.disabled = true;
-       
+            plantarse.disabled = true
         } else{
             mensaje_resultado.textContent = "¡Es un empate!";
             pedir_carta.disabled = true;
