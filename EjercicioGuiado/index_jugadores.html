@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de jugadores</title>
+</head>
+<body>
+    <label>Equipo</label>
+    <input type="text" name="equipo" id="equipo"><br>
+    <label>Nombre del jugador</label>
+    <input type="text" name="nombreJugador" id="NombreJugador"><br>
+    <label>Número de goles</label>
+    <input type="text" name="goles" id="Ngoles"><br>
+    <label>Tarjetas Amarillas</label>
+    <input type="text" name="amarillas" id="TAmarillas"><br>
+    <label>Tarjetas Rojas</label>
+    <input type="text" name="rojas" id="TRojas"><br>
+    <input onclick="agregar_jugador()" type="button" value="Agregar" id="btn_agregar">
+    <input onclick="borrar_jugador()" type="button" value="Borrar" id="btn_borrar">
+    <h3>Estadísticas:</h3>
+    <p>
+        Nº total de jugadores => <span id="total_jugadores">0</span><br>
+        Nº total de goles => <span id="total_goles">0</span><br>
+        Nº total de Tarjetas Amarillas => <span id="total_amarillas">0</span><br>
+        Nº total de Tarjetas Rojas => <span id="total_rojas">0</span><br>
+    </p>
+    <div id="lista_jugadores">
+        <h3>Lista de jugadores</h3>
+    </div>
+    <script src="script_jugadores.js"></script>
+</body>
+</html>

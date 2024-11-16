@@ -22,4 +22,18 @@ body {
     left: 100px;
     margin-left: -75px;
 }
-
+.puntosApuestas {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    max-width: 800px;
+    gap: 20px;
+}
+.PuntosCrupier{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;   
+}
