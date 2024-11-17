@@ -24,7 +24,7 @@ for(let i = 0;i<usuarios_no_validos.length;i ++){
     event.preventDefault();
 }
 });
-//Para que el input de usuaario cambie de color
+//Para que el input de usuario cambie de color
 document.getElementById('input_user').addEventListener('focus',(event)=>{
 let input_user = document.getElementById('input_user');
 input_user.style.backgroundColor = "#92deac";

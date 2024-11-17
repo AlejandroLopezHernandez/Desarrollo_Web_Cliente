@@ -133,6 +133,7 @@ function crear_baraja(){
     if(puntos_crupier > 21){
         mensaje_resultado.textContent = "El crupier se ha pasado de 21, ¡has ganado!";
         saldo_inicial += apuesta_actual;
+        saldo.textContent = saldo_inicial;
         fin_partida();
     } else if(puntos_crupier >= 17){
         if(puntos_crupier > puntos_jugador){
