@@ -61,7 +61,7 @@ function n_veces_libro_prestado(){
 
     for (const libro of libros) {
     let acumulador = 0;
-    let libro_prestado = false;
+    
         for (const historial of historialPrestamos) {
             if(libro.id === historial.id_libro){
                 acumulador++;
