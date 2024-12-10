@@ -1,0 +1,16 @@
+En este ejercicio tenemos un fichero script.js que contiene un objeto inventario.
+Este inventario tienen 20 productos, cada producto tiene una url, una descripción,
+precio y descuento el descuento puede ser [sin descuento, normal, black friday] 
+
+Debes mostrar todos los productos en la web, cada uno ello tienen un boton comprar.
+Este botón comprar debe añadir un elemento al carrito y actualizar el contador.
+
+Cuando le des al boton carrito te saldrá una lista con los elementos del carrito, y
+el precio con y sin iva y con el descuento aplicado, si es que ya lo tiene.
+El IVA es el 21% y el descuento es sin descuento 0, normal un 7% y el del black friday un 15% y
+pondrá un botón al final que será finalizar pago.
+
+"Finalizar pago" debe hacer dos cosas: vaciará el carrito y actualizará el contador y además debe
+borrar el producto del inventario. Simulando que se acaba el inventario. 
+Es decir,si el carrito tiene el producto 1, el 2 y el 3 del inventario, al darle al finalizar pago,
+carrito estará vacio el inventario tendrá tres productos menos, justo los de los carrito.
