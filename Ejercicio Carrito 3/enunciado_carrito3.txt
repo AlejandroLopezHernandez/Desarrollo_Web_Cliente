@@ -1,0 +1,37 @@
+Vamos a utilizar la base del carrito II. Cada elemento tiene un 10 productos y cuando llegan a 0 se ponen ocultos y no dejan comprar.
+
+Va haber distintas modificaciones:
+
+    Cada objeto del array inventario hay que añadirle un campo identinficador, podeis poner lo que querais pero debe ser único.
+     Es decir un objeto debe tener:
+        url
+        descripción
+        precio
+        descuento 
+        identificador
+
+No se debe tocar el script.js se debe hacer en javascript.
+
+En la parte de arriba va haber ademas del elemento carrito un desplegable (select) que tendra 4 opciones (3,5,10 todos) 
+todos sera la opción por defecto y otro desplegable que sea (ordenar por precio menor, ordenar por precio mayor, 
+por descuento,sin orden) sin orden será por defecto.
+
+    Primer desplegable, mostrara el numero de elementos que se ha seleccionado. Es decir si escojo 3 solo mostrara los 3 
+    primeros productos. Pero mostrar abajo de los productos un número de botones prorcional al número de productos que quedan,
+     más dos flechas. 
+
+Ejemplo pongo 3 productos.
+
+Mostrar los tres primeros productos de inventario, un boton < otro 2, 3, 4, 5, 6 > el boton < está desabilitado si es la primera
+ página. si pulso 3 mostrar los productos 6,7,8. Es decir 0,1,2 son la primera página, 3,4,5 la segunda ... si pulso el botón 
+ flecha ira a la siguiente selección.
+
+    Segundo desplegable, debe ordenar la lista por precio, o por orden alfábetico, si orden mostraria la lista original.
+        Ordenar por precio mayor, los elementos aparecen en orden de mayor precio el primero y el menor precio el ultimo,
+         debe respertar el otro desplegable es decir si esta puesto de 3 en 3 debe mostrar en la primera pagina los 3 de mayor precio
+        Ordenar menor igual pero el mas barato primero
+        Ordenar por descuento primero los descuentos black friday, luego los normales, 
+
+
+* Debeis modificar el objeto inventario, para ordenarlo. si usas como id la posicion dentro del array vas a tener problema porque
+ va a cambiar es mejor usar un id en el objeto que no cambia y ese id sera el mismo que en el hmtl.

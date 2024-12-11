@@ -1,0 +1,13 @@
+En la mayor parte es exactamente igual que el anterior, añadir al carrito y comprar... 
+
+Los cambios son:
+
+    Cada producto tiene 10 unidades, mostrarla con el mismo estilo del número del carrito.
+    Cada vez que le das a añadir al carrito añade el objeto al carrito.
+    Cuando hagas click en carrito tienes que ver tus compras, el cálculo y la opción pagar. 
+    Puedes mostrarlo de dos forma una lista de elementos, y si hay elementos dobles lo calculas dos veces. 
+    O modo avanzado si en el carrito hay 3 veces un elemento muestra el elemento una vez pones un x3 y haces los calculos por 3.
+    Cuando le des a pagar debe actualizar el número de elementos que se hagan comprando restando en inventario el número correspondiente.
+    Por ejemplo en un principio tengo 10 televisores compro 3 debe aparecer 7 televisores.
+    Si un objeto tiene 0 existencia debe aperecer como que no se puede pulsar el boton y en otro color podeis usar la opcion 
+    opacity=0.5 la medio oculta es un efecto que parece no estar disponible. 

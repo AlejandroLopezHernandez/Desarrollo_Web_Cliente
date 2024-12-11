@@ -1,10 +1,9 @@
 // Carrito inicial
 let carrito = [];
+const productosContainer = document.getElementById('productos');
 
 function addElementoDiv() {
   // Seleccionar el primer producto del inventario
-
-  const productosContainer = document.getElementById('productos');
 
   let contenido = "";
   contenido += '<div class="flex-container">';
@@ -21,6 +20,7 @@ function addElementoDiv() {
     contenido += '    <h5>' + producto['descripcion'] + '</h5>';
     contenido += '    <p>Precio: $' + producto['precio'] + '</p>';
     contenido += '    <p>Descuento: ' + producto['descuento'] + '</p>';
+    contenido += '    <p>Stock:'+producto['stock'] +'</p>';
     contenido += '    <button class="btn btn-primary" id="' + i + '" >Comprar</button>';
     contenido += '  </div>';
   }
@@ -41,8 +41,23 @@ function comprar() {
 
 // Función para añadir un producto al carrito
 function agregarAlCarrito(producto) {
-  carrito.push(producto);
-  actualizarCarrito();
+  if(producto.stock > 0){
+    carrito.push(producto);
+    actualizarCarrito();
+    controlarStock(producto);
+  } else {
+    alert("Producto agotado");
+  }
+}
+
+function controlarStock(producto){
+  let stock_actualizado = '<p>Stock:'+ producto.stock+ '</p>';
+
+  if (producto.stock > 0){
+    producto.stock -= 1;
+   
+  }
+
 }
 
 // Función para actualizar la interfaz del carrito
