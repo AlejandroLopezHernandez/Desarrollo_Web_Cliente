@@ -4,7 +4,6 @@ const productosContainer = document.getElementById('productos');
 
 function addElementoDiv() {
   // Seleccionar el primer producto del inventario
-
   let contenido = "";
   contenido += '<div class="flex-container">';
   for (let i = 0; i < inventario.length; i++) {
@@ -32,31 +31,24 @@ function addElementoDiv() {
 function comprar() {
   for (let i = 0; i < inventario.length; i++) {
     let boton_comprar = document.getElementById(i);
-
     boton_comprar.addEventListener("click", () => {
       agregarAlCarrito(inventario[i]);
+     
+      if(inventario[i]['stock'] == 0) {
+        boton_comprar.disabled = true;
+      alert("Producto agotado");
+      }
     });
   }
 }
 
 // Función para añadir un producto al carrito
 function agregarAlCarrito(producto) {
-  if(producto.stock > 0){
+  if(producto['stock'] > 0){
     carrito.push(producto);
-    actualizarCarrito();
-    controlarStock(producto);
-  } else {
-    alert("Producto agotado");
+    producto['stock'] -= 1;
   }
-}
-
-function controlarStock(producto){
-  let stock_actualizado = '<p>Stock:'+ producto.stock+ '</p>';
-
-  if (producto.stock > 0){
-    producto.stock -= 1;
-   
-  }
+  actualizarCarrito();
 
 }
 
