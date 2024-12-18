@@ -4,8 +4,14 @@ body {
   padding: 0;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .cart-button {
-  position: relative;
+  position: fixed;
   background-color: #007bff;
   color: white;
   border: none;
@@ -13,18 +19,6 @@ body {
   padding: 15px;
   font-size: 20px;
   cursor: pointer;
-}
-
-#boton_finalizar {
-  position: relative;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 10%;
-  padding: 15px;
-  font-size: 15px;
-  cursor: pointer;
-  text-align: center;
 }
 
 .cart-button:hover {
@@ -48,28 +42,18 @@ body {
 
 .card {
   margin-bottom: 20px;
+  margin: 20px;
 }
 
 .card img {
   height: 200px;
   object-fit: cover;
+  padding: 20px;
+  margin: 20px;
 }
 
-.flex-container {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.flex-container>.contenido {
-  border: 1px solid blue;
-  box-sizing: border-box;
-  max-width: calc(50% - 10px);
-  padding: 10px;
-  margin: 5px;
-}
-
-#fotos {
+.img-fluid {
+  padding: 20px;
+  height: 300px;
   width: 600px;
-  height: 400px;
 }
