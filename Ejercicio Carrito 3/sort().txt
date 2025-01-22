@@ -1,0 +1,47 @@
+Como ordenar de forma facil un objeto de esta forma let inventario=[
+ {
+ "url_imagen": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1e",
+ "descripcion": "Laptop de última generación",
+ "precio": 899.99,
+ "descuento": "black friday"
+ },
+ {
+ "url_imagen": "https://images.unsplash.com/photo-1593642634367-d91a135587b5",
+ "descripcion": "Televisor 4K UHD 55 pulgadas",
+ "precio": 499.99,
+ "descuento": "black friday"
+ }]
+
+La función sort() de JavaScript permite recibir como argumento una función de comparación 
+para definir el criterio de ordenación entre los elementos del array.
+
+Cuando llamas a:
+
+productos.sort((a, b) => {
+return a.precio - b.precio;
+});
+
+estás proporcionándole a sort() una función que compara dos elementos del array, a y b,
+ a partir de su propiedad precio.
+
+¿Cómo funciona la comparación?
+
+La función que pasas al sort() debe devolver un número:
+
+Si el valor que se devuelve es negativo, significa que a debe ir antes que b.
+
+Si se devuelve positivo, a debe ir después que b.
+
+Si se devuelve cero, el orden entre a y b no se altera (se consideran equivalentes para el orden).
+
+En el ejemplo:
+
+return a.precio - b.precio;
+
+Si a.precio es menor que b.precio, por ejemplo a.precio = 10 y b.precio = 20, 
+entonces 10 - 20 = -10, un número negativo. Esto le indica a sort() que a debe ir antes que b.
+
+Si a.precio es mayor que b.precio, por ejemplo a.precio = 30 y b.precio = 15, 
+entonces 30 - 15 = 15, un número positivo. Esto indica que a debe ir después que b.
+
+Si a.precio y b.precio son iguales, a.precio - b.precio = 0, por lo que no cambia el orden entre ellos.

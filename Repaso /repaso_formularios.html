@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso de formularios</title>
+    <link rel="stylesheet" href="estilo_formularios.css">
+</head>
+<body>
+    <h2>Repaso de formularios</h2>
+    <h3>Formulario para agregar</h3>
+    <label>Usuario:</label>
+    <input type="text" name="agregar_usuario" id="agregar_usuario"> <br><br>
+    <label>Contraseña:</label>
+    <input type="password" name="agregar_contraseña" id="agregar_contraseña"><br><br>
+    <input class="botones" type="button" value="Agregar" onclick="agregar_usuario()">
+    <h3>Formulario borrar</h3>
+    <label>Nombre para borrar: </label>
+    <input type="text" name="borrar_usuario" id="borrar_usuario">
+    <input class="botones" type="button" value="Borrar usuario" onclick="borrar_usuario()"><br><br>
+    <h3>Formulario para actualizar: </h3>
+    <label>Nombre para actualizar: </label>
+    <input type="text" name="nombre_viejo" id="nombre_viejo"><br><br>
+    <label>Nombre nuevo: </label>
+    <input type="text" name="nombre_nuevo" id="nombre_nuevo"><br><br>
+    <input class="botones" type="button" value="Actualizar" onclick="actualizar_usuario()"><br><br>
+    <h3>Lista de usuarios:</h3>
+    <ul id="lista">
+
+    </ul>
+    <script src="script_formularios.js"></script>
+</body>
+</html>

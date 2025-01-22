@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzería</title>
+</head>
+<body>
+    <h2>Pizzería</h2>
+
+    <label>Tamaño:</label>
+    <input type="text" name="tamanyo" id="tamanyo"> <br>
+    <p>
+        Los ingredientes que se pueden escoger son: extra de mozarella,
+        peperoni, bacon, jamón, aceitunas, atún, pimiento y cebolla.
+    </p>
+    <label>Ingredientes</label>
+    <input type="number" name="n_ingredientes" id="n_ingredientes"> <br><br>
+    <input type="button" value="Seleccionar ingredientes" id="seleccionar_ingredientes" onclick="seleccionar_ingredientes()"> <br><br>
+    <input type="button" value="Crear pizza" id="crear_pizza" onclick="crear_pizza()"> <br><br>
+    <input type="button" value="Todas las pizzas" id="todas_pizzas" onclick="mostrar_pizzas()"> <br><br>
+    <input type="button" value="Estadísticas" id="estadisticas" onclick="mostrar_estadisticas()"> <br><br>
+    <div id="div_ingredientes">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

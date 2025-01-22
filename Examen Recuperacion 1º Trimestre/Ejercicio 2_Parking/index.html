@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking</title>
+</head>
+<body>
+    <h2>Ejercicio de parking</h2>
+    <h3>Formulario para ingresar un vehículo</h3>
+    <form>
+
+        <label>Matrícula: </label>
+        <input type="text" name="matricula" id="matricula"> <br><br>
+        <label>Tipo de vehículo: </label>
+        <input type="text" name="tipo_vehiculo" id="tipo_vehiculo"> <br><br>
+        <label>Hora de entrada: </label>
+        <input type="time" name="hora_entrada" id="hora_entrada"> <br><br>
+        <input type="button" value="Aparcar" onclick="aparcar_vehiculo()"> <br><br>
+        <label>Número de plazas ocupadas: </label> <span id="n_plazas_libres"> </span><br><br>
+        <input type="text" name="buscar_vehiculo_matricula" id="buscar_vehiculo_matricula">
+        <input type="button" value="Buscar por matricula" onclick="buscar_x_matricula()"> <br><br>
+        <input type="button" value="Todos" onclick="todos()"> <br><br>
+        <input type="button" value="Estadísticas" onclick="estadisticas()"> <br><br>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Hacer un programa que haga lo siguiente.
+
+Tiene un formulario con campos para datos de futbolistas, 4.
+
+Nombre, posicion, goles, equipo.
+
+El formulario debe tener tres botones, guardar formulario debe guardar los datos rellenados. 
+y restaurar formulario debe poner los datos como estaban guardados. Tambien un boton borrar datos.

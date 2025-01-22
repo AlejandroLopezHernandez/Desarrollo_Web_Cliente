@@ -1,91 +1,84 @@
 let usuarios = {};
-let div1 = document.createElement('div');
+
 let label1 = document.createElement('label');
 label1.innerText = "Usuario";
 let label2 = document.createElement('label');
 label2.innerText = "Contraseña 1";
-
 let label3 = document.createElement('label');
-label3.innerText ="Contraseña 2";
-
+label3.innerText = "Contraseña 2";
 let input1 = document.createElement('input');
 let input2 = document.createElement('input');
-input2.type = "password";
+input2.type = 'password';
 let input3 = document.createElement('input');
-input3.type = "password";
+input3.type = 'password';
 
-let boton = document.createElement("button");
-boton.innerText ="Añadir usuario";
+let boton = document.createElement('button');
+boton.innerText = "Añadir usuario";
 
-div1.appendChild(label1);
-div1.appendChild(input1);
-div1.appendChild(document.createElement('br'));
-div1.appendChild(document.createElement('br'));
-div1.appendChild(label2);
-div1.appendChild(input2);
-div1.appendChild(document.createElement('br'));
-div1.appendChild(document.createElement('br'));
-div1.appendChild(label3);
-div1.appendChild(input3);
-div1.appendChild(document.createElement('br'));
-div1.appendChild(document.createElement('br'));
-div1.appendChild(boton);
+document.body.appendChild(label1);
+document.body.appendChild(input1);
+document.body.appendChild(document.createElement('br'));
+document.body.appendChild(document.createElement('br'));
+document.body.appendChild(label2);
+document.body.appendChild(input2);
+document.body.appendChild(document.createElement('br'));
+document.body.appendChild(document.createElement('br'));
+document.body.appendChild(label3);
+document.body.appendChild(input3);
+document.body.appendChild(document.createElement('br'));
+document.body.appendChild(document.createElement('br'));
+document.body.appendChild(boton);
 
-document.body.appendChild(div1);
+let contenedor_usuarios = document.createElement('ul');
+document.body.appendChild(contenedor_usuarios);
 
-boton.addEventListener('click',funcion_click);
-function funcion_click(){
+boton.addEventListener('click', comprobar_inputs);
+
+
+function comprobar_inputs() {
     input_usuario = input1.value;
     input_contraseña1 = input2.value;
     input_contraseña2 = input3.value;
 
-    if(input_usuario.length == 0|| input_contraseña1.length == 0 || input_contraseña2.length == 0){
-        alert("Hay algún campo vacío")
-    }else if (input_contraseña1 !== input_contraseña2){
-        alert("Las contraseñas no coinciden");
-    } else if(input_contraseña1.length < 8 || input_contraseña2.length < 8){
-        alert("Las contraseñas deben contener al menos 8 carácteres");
-    } else{
-        usuarios[input_usuario] = input_contraseña1;
-        alert("Usuario añadido");
-        contraseña_cifrada = cifrar_contraseña(input_contraseña1);
-
-        let lista = document.createElement('li');
-        lista.innerText = `${input_usuario}:${contraseña_cifrada}`;
-        
-        let boton_borrar = document.querySelector('#boton_borrar');
-        if (!boton_borrar){
-            boton_borrar = document.createElement('button');
-            boton_borrar.innerText = "Borrar usuario";
-            boton_borrar.id = boton_borrar;
-            boton_borrar.addEventListener('click',funcion_borrar);
-            div1.appendChild(document.createElement('br'));
-            div1.appendChild(boton_borrar);
-        }
-        div1.appendChild(lista);
-
-        if(input_usuario === usuarios[input_usuario]){
-            usuarios[input_usuario] = input_contraseña1;
-            alert("Contraseña cambiada");
-        }
+    if (input_usuario.length <= 0) {
+        alert("Tienes que rellenar algunos de los campos");
+        return 0;
+    } 
+    if(input_contraseña1.length < 8 || input_contraseña2.length < 8){
+        alert("Las contraseñas deben tener al menos 8 carácteres");
+        return 0;
     }
-}
-function funcion_borrar(){
-    input_usuario = input1.value;
-    input_contraseña1 = input2.value;
+    if (input_contraseña1 !== input_contraseña2) {
+        alert("Las contraseñas no coinciden");
+        return 0;
+    } 
+        //Muy importante, para guardar en un diccionario
+        usuarios[input_usuario] = input_contraseña1;
+        let cadena_para_cifrar = input_contraseña1.substring(1,4);
+        let contraseña_cifrada = input_contraseña1.replace(cadena_para_cifrar,'*****');
 
-    delete usuarios[input_usuario];
-    delete usuarios[input_contraseña1];
-    alert("Usuario borrado");
-}
-function cifrar_contraseña(contraseña){
-    contraseña = input2.value;
+        actualizar_usuarios();
+        } 
 
-    let cadena_para_cifrar = contraseña.substring(3,contraseña.length);
-    let cadena_cifrada = contraseña.replace(cadena_para_cifrar,'****');
-    return cadena_cifrada;
-}
+        function actualizar_usuarios(){
+            contenedor_usuarios.innerHTML = "";
 
+            for (let usuario in usuarios){
+                let lista = document.createElement('li');
+                lista.innerHTML = `Usuario: ${usuario}<br>Contraseña: ${usuarios[usuario]}`;
+
+                let boton_borrar = document.createElement('button');
+                boton_borrar.innerText = "Borrar usuario";
+                boton_borrar.addEventListener('click', () => {
+                    delete usuarios[usuario];
+                });
+
+                lista.appendChild(boton_borrar);
+                contenedor_usuarios.appendChild(lista);
+            }
+        }
+
+    
 
 
 

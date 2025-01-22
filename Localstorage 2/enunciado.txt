@@ -1,0 +1,6 @@
+Hacer un página web que tenga dos campos clave, valor y dos botones, guardar y mostrar-borrar.
+
+El botón guardar, hay guardar en localstorage la clave y el valor.
+
+El botón mostrar, mostrar en un div todas las claves y valor del localstorage, 
+además de mostrar en una lista borrar una a una de localstorage.

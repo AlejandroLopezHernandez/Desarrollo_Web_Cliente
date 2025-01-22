@@ -1,0 +1,20 @@
+Hacer un una pagina web que haga lo siguiente:
+La pagina sin cookies hace dos cosas. 
+*Primero, cuando se carga la pagina web, una vez esta termine de cargarse, habrá un evento que lanze un banner,
+(confirm) para aceptar o no las cookies de esta web. Si no hay cookies, este mensaje aparecerá cada vez que se recague.
+*Si aceptas las cookies, se creará una cookie de 10 minutos. Esto hará que durante esos 10 minutos no salga dicho banner.
+*En caso de que haya una cookie de usuario, la pagina pondrá un campo de texto con un usuario y una contraseña, 
+al insertar usuario y password. Si no hay cookie de usuario.
+*Cuando hagas login y password, se creará una cookie de usuario que dura 10 minutos, durante esos 10 minutos no aparecerá
+ la pagina de login y password sino la pagina de: "Hola,tu usuario y contraseña son...
+Esta pagina además tendra un botón que es borrar todas las cookies.
+Y un campo de texto y otro boton, color fondo usuario. Ese campo si se poner un color en inglés, cuando se recarge la pagina,
+ el fondo de la pagina del usuario tendrá ese color. No tenéis que crear una cookie nueva, tenéis que añadir el color a la cookie de usuario.
+
+Ejemplo. 
+Primera vez me sale el banner acepto la cookies, recargo y no me sale. Si no acepto recargo y me vuelve a salir el banner.
+
+Si no he hecho login me aparece en la web login y password, cuando haga login y se haya creado la cookie no aparecera esa 
+página sino una con bienvenida, un campo de texto y dos botones, cambiar color y borrar cookies.
+Si cambio el color, cuando recarge la pagina me debe aparecer la pagina de bienvenida con el campo de texto y los botones
+y el color de fondo será el que indique en el campo de texto.

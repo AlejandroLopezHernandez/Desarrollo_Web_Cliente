@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo_jugadores.css">
+    <title>Ejercicio extra de formularios: Jugadores de fútbol</title>
+</head>
+<body>
+    <h2>Ejercicio extra:jugadores de fútbol</h2>
+    <form id="formulario">
+        <label>Equipo:</label>
+        <input type="text" name="equipo" id="equipo" required>  <br><br>
+        <label>Nombre del jugador:</label>
+        <input type="text" name="nombre" id="nombre" required> <br><br>
+        <label>Número de goles</label>
+        <input type="number" name="goles" id="goles" required> <br><br>
+        <label>Tarjetas amarillas</label>
+        <input type="number" name="amarillas" id="amarillas" required> <br><br>
+        <label>Tarjetas rojas</label>
+        <input type="number" name="rojas" id="rojas" required><br><br>
+        <input type="button" value="Añadir jugador" id="añadir"><br><br>
+        <input type="button" value="Borrar jugador" id="borrar" onclick="borrar_jugador()">
+    </form>
+    <p>
+        <h3>Estadísticas</h3>
+        <strong>Total equipos:</strong> <span id="total_equipos">0</span> <br>
+        <strong>Total jugadores:</strong> <span id="total_jugadores">0</span> <br>
+        <strong>Total goles:</strong> <span id="total_goles">0</span> <br>
+        <strong>Total tarjetas amarillas:</strong> <span id="total_amarillas">0</span> <br>
+        <strong>Total tarjetas rojas:</strong> <span id="total_rojas">0</span> <br>
+    </p>
+
+    <h3>Lista de jugadores</h3>
+    <div id="lista">
+
+    </div>
+    <script src="script_jugadores.js"></script>
+</body>
+</html>
