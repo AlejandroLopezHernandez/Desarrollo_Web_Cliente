@@ -1,0 +1,22 @@
+Implementar un sistema de reservas para un evento. El evento tiene tres tipos de entradas: VIP, Preferencial y General. La cantidad de entradas disponibles para cada categoría es limitada(10 para cada una). Además, hay descuentos especiales para estudiantes y miembros del club de fans del evento.
+
+El sistema debe cumplir con los siguientes requisitos:
+
+Entrada de Datos:
+
+Pedir al usuario que elija el tipo de entrada: VIP, Preferencial o General.
+Preguntar si el usuario es estudiante o miembro del club de fans (esto le da derecho a un descuento).
+Solicitar la edad del usuario (hay precios especiales para menores de 18 años).
+Reglas de Negocio:
+
+Si las entradas para la categoría elegida están agotadas, mostrar un mensaje indicando que no hay disponibilidad.
+Si hay disponibilidad, calcular el precio según la categoría elegida:
+VIP: $100
+Preferencial: $70
+General: $40
+Aplicar un descuento del 20% para estudiantes o miembros del club de fans. Este descuento no es acumulable.
+Aplicar un descuento adicional del 10% para menores de 18 años. Este descuento es acumulable con el anterior.
+Salida de Datos:
+
+Mostrar el precio final de la entrada según los datos ingresados y las reglas aplicables.
+Teneis un ejemplo como en javascript se pueden usar variables globales para mantener el numero de entradas.

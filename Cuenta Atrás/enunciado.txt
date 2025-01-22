@@ -1,0 +1,28 @@
+La pagina principal solo debe tener un boton inciar cuenta atras.
+Si haces un click debe enmpezar una cuenta atras con 3 minutos debe cada segundo mostrar la cuenta es decir 2:59, 2,58... Esta cuenta atras estara en un div, debes ademas de mostrar el reloj le debes aplicar estilo de forma dinamica, cambiar el color de fondo a gris el color del texto en blaco y la hora debe estar en h1.
+Cuando llegue a 0, debe cambiar el color de fondo a rosa, en un div debe mostrar una imagen con gif de emergencia y debe sonar un sonido.
+Para que suene el sonido
+
+<audio id="audio" controls>
+<source type="audio/wav" src="audio.wav">
+</audio>
+
+En CSS:
+
+
+#audio{
+display: none
+}
+
+En javascript
+
+var audio = document.getElementById("audio");
+
+audio.play();
+ 
+
+Para que pare el reloj cuando llegue a 0 
+
+let timerId = setInterval(func|código, [retraso], [arg1], [arg2], ...) Para lanzarlo
+
+para pararlo clearInterval(timerId);

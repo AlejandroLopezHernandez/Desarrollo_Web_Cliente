@@ -1,0 +1,4 @@
+Implementa una función para listar todos los libros que no están prestados actualmente.
+Implementa una función que, dado un id_usuario, muestre todos los libros que tiene prestados.
+Implementa una función que, dado un id_libro, encuentre todos los usuarios que lo han prestado.
+Implementa una función que calcule para cada libro el número total de veces que ha sido prestado.

@@ -1,0 +1,10 @@
+Crear una pagina web con un boton llamado semaforo.
+Cuando haces click en el debe ocultar el boton crear semaforo.
+Crear tres divs con un tamaño y color de fondo gris.
+Debe añadir eventos de raton, si lo pasas por el primer div debe ponerse en rojo
+En el segundo div ponerse en amarillo
+Y el tercero en rojo
+
+Cuando salga del cuadro debe volver a ponerse en gris
+
+Pon un borde ancho a los cuadros para que se vea la separación

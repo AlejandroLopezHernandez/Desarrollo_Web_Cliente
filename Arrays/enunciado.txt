@@ -1,0 +1,15 @@
+Crea un hmtl y el javascript correspondiente que tenga los siguiente.
+
+5 botones.
+
+El primero permite añadir elementos a un array pedira el elemento por un prompt
+
+El segundo permite borrar el ultimo elemento del array
+
+El tercero permitira borrar el primer elemento.
+
+El cuarto borrar un elemento concreto pedira con un prompt el elemento a borrar.
+
+Y el quinto mostrar por consola y con un alert el array.
+
+Cada boton llamara a una funcion distinta, todos estaran en mismo fichero js

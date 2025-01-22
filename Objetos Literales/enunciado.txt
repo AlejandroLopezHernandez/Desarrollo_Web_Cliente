@@ -1,0 +1,11 @@
+Crea un hmtl y el javascript correspondiente que tenga los siguiente.
+
+3 botones.
+
+El primero permite añadir clave valor a un diccionario pedira el elemento por dos  prompt
+
+El segundo permite borrar la clave del dccionario
+
+Y el tercero mostraar por consola el diccionario.
+
+Cada boton llamara a una funcion distinta, todos estaran en mismo fichero js

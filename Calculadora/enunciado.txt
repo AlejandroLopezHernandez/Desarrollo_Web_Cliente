@@ -1,0 +1,2 @@
+Calculadora estática: debe  sumar, restar, multiplicar y dividir. Se crean dos variables y se muestra por consola el resultado de todos los elemento en modo tabla. Usar variables intermedia para guardar los resultados  
+Calculadora con iteración con el usuario: Hacer otra calculadora que pidas los datos de entrada mediante prompts, primero debe aparecer un alert que explique al usuario el funcionamiento de la calculadora. Luego pedira los datos y el resultado lo mostrara como un alert

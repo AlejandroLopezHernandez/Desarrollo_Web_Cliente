@@ -1,0 +1,7 @@
+Vamos crear una estructura de datos para guardar equipos y jugadores de una liga.
+
+Los equipos deben, tener un nombre, un sede (nombre del estadio, calle, codigo postal), el numero de goles a favor y numero de goles en contra.
+
+Los jugadores debes guardar nombre, apellido, dorsal, goles, posicion, tarjetas amarillas y tarjetas rojas.
+
+Crea de forma estatica dos equipos con 5 jugadores cada uno

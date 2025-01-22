@@ -1,0 +1,11 @@
+Vamos hacer un carrusel de fotos debe tener tres imagenes si le das al boton de la derecha cambia la imagen por la de la derecha, si le das a la izquierda cambia a la de izquierda.
+Si llega al final empezara por el principio.
+Debajo hay un checkbox habar uno por cada una de las imagenes estar checkeado el que corresponda por ejemplo la foto dos el checkbox dos
+Ayuda
+
+<input type='radio' id='buttonX' name='fred' value='X'>
+<input type='radio' id='buttonY' name='fred' value='Y' checked>
+
+document.getElementById('buttonX').checked = true;
+
+Hacer un array estatico de 5 fotos y 5 checkbox
