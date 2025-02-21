@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(255, 221, 171);
+}
+#resultado_imagen{
+    height: 700px;
+    width: 500px;
+    display: none;
+}
+#video_resultado{
+    height: 500px;
+    width: 400px;
+    display: none;
+}
+#audio_resultado{
+    display: none;
+}
